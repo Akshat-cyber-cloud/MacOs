@@ -7,7 +7,6 @@ import Note from './Components/windows/Note'
 import Resume from './Components/windows/Resume'
 import Spotify from './Components/windows/Spotify'
 import Cli from './Components/windows/Cli'
-import Mail from './Components/windows/Mail'
 
 const App = () => {
   const [windowsState, setWindowsState] = useState({
@@ -28,7 +27,6 @@ const App = () => {
       {windowsState.resume && <Resume onClose={() => setWindowsState(state => ({ ...state, resume: false }))} />}
       {windowsState.spotify && <Spotify onClose={() => setWindowsState(state => ({ ...state, spotify: false }))} />}
       {windowsState.cli && <Cli onClose={() => setWindowsState(state => ({ ...state, cli: false }))} />}
-      {windowsState.mail && <Mail onClose={() => setWindowsState(state => ({ ...state, mail: false }))} />}
     </main>
   )
 }
