@@ -24,6 +24,11 @@
         width: 3.75rem;
 
         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        cursor: pointer;
+
+        img {
+            pointer-events: none;
+        }
     }
 
 

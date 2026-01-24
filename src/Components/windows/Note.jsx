@@ -6,7 +6,7 @@ import "./note.scss"
 import { atelierDuneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 
-const Note = ({ windowName, setWindowsState }) => {
+const Note = ({ onClose }) => {
 
     const [ markdown, setMarkdown ] = useState(null)
 
@@ -17,7 +17,7 @@ const Note = ({ windowName, setWindowsState }) => {
     }, [])
 
     return (
-        <MacWindow windowName={windowName} setWindowsState={setWindowsState} >
+        <MacWindow onClose={onClose} >
             <div className="note-window">
                 { markdown ? <SyntaxHighlighter language='typescript' style={atelierDuneDark} >{markdown}</SyntaxHighlighter> : <p>Loading...</p> }
             </div>
